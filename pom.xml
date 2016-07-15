@@ -52,6 +52,16 @@
             <artifactId>tomcat-embed-jasper</artifactId>
             <!--<scope>provided</scope>-->
         </dependency>
+        <!--
+            There's a bug(https://youtrack.jetbrains.com/issue/IDEA-107048)
+            in IntelliJ that means that provided dependencies aren't added to the classpath.
+            Assuming you want to stick with IDEA, you have a few options:
+
+            Manually configure the classpath in IDEA
+            Run the samples on the command line using mvn spring-boot:run
+            Remove all occurrences of <scope>provided</scope> from the pom. This will mean that app can't be deployed as a war to Tomcat or similar
+        -->
+
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
@@ -86,7 +96,20 @@
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>4.0.3</version>
                 <configuration>
-                    <!--TODO: config the database info-->
+                    <!-- development-->
+                    <url>jdbc:postgresql://localhost:5432/ccicnmg_certify_sys_dev</url>
+                    <user>postgres</user>
+                    <password>postgres</password>
+
+                    <!--test-->
+                    <!--<url>jdbc:postgresql://localhost:5432/ccicnmg_certify_sys_test</url>-->
+                    <!--<user>postgres</user>-->
+                    <!--<password>postgres</password>-->
+
+                    <!--production-->
+                    <!--<url>jdbc:postgresql://localhost:5432/ccicnmg_certify_sys_prod</url>-->
+                    <!--<user>postgres</user>-->
+                    <!--<password>postgres</password>-->
                 </configuration>
             </plugin>
         </plugins>
