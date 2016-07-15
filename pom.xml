@@ -92,24 +92,37 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
             <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>properties-maven-plugin</artifactId>
+                <version>1.0.0</version>
+                <executions>
+                    <execution>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>read-project-properties</goal>
+                        </goals>
+                        <configuration>
+                            <files>
+                                <file>src/main/resources/application-development.properties</file>
+                                <!--<file>src/main/resources/application-test.properties</file>-->
+                                <!--<file>src/main/resources/application-production.properties</file>-->
+                            </files>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
                 <groupId>org.flywaydb</groupId>
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>4.0.3</version>
                 <configuration>
-                    <!-- development-->
-                    <url>jdbc:postgresql://localhost:5432/ccicnmg_certify_sys_dev</url>
-                    <user>postgres</user>
-                    <password>postgres</password>
-
-                    <!--test-->
-                    <!--<url>jdbc:postgresql://localhost:5432/ccicnmg_certify_sys_test</url>-->
-                    <!--<user>postgres</user>-->
-                    <!--<password>postgres</password>-->
-
-                    <!--production-->
-                    <!--<url>jdbc:postgresql://localhost:5432/ccicnmg_certify_sys_prod</url>-->
-                    <!--<user>postgres</user>-->
-                    <!--<password>postgres</password>-->
+                    <url>${spring.datasource.url}</url>
+                    <user>${spring.datasource.username}</user>
+                    <password>${spring.datasource.password}</password>
+                    <!--
+                        For future reference, this works great,
+                        but you need to invoke mvn initialize explicitly before calling the flay plugin e.g. mvn initialize flyway:migrate
+                    -->
                 </configuration>
             </plugin>
         </plugins>
