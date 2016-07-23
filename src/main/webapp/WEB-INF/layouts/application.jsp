@@ -12,8 +12,10 @@
 <html lang="en">
 <head>
     <title>CCICNMG认证管理系统</title>
+    <!--stylesheets-->
     <link href="<c:url value="/assets/public/css/vendor.css"/>" rel="stylesheet">
     <link href="<c:url value="/assets/public/css/app.css"/>" rel="stylesheet">
+    <!--javascripts-->
     <script src="<c:url value="/assets/public/js/node_modules.js"/>"></script>
     <script src="<c:url value="/assets/public/js/vendor.js"/>"></script>
     <script src="<c:url value="/assets/public/js/app.js"/>"></script>
@@ -43,7 +45,7 @@
 </body>
 </html>
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         if (!null) {
             $('nav ul').jarvismenu({
                 accordion: true,

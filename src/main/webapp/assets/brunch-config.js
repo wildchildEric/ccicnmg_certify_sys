@@ -2,8 +2,8 @@ module.exports = {
     files: {
         javascripts: {
             joinTo: {
-                'js/vendor.js': /^vendor/,
                 'js/node_modules.js': /^node_modules/,
+                'js/vendor.js': /^vendor/,
                 'js/app.js': /^app/
             }
         },
