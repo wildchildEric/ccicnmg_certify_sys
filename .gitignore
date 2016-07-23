@@ -15,4 +15,5 @@ hs_err_pid*
 target
 .idea
 ccicnmg_certify_sys.iml
-src/main/webapp/assets/vendor/bootstrap-3.3.6/docs
+src/main/webapp/assets/bootstrap-3.3.6/docs
+npm-debug.log
