@@ -1,4 +1,4 @@
-package com.ccicnmg.certify.domain.service;
+package com.ccicnmg.certify.service;
 
 import java.time.ZonedDateTime;
 

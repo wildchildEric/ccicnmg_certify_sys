@@ -1,10 +1,10 @@
 package com.ccicnmg.certify.config;
 
 import com.ccicnmg.certify.domain.model.User;
-import com.ccicnmg.certify.domain.service.AuditingDateTimeProvider;
-import com.ccicnmg.certify.domain.service.CurrentTimeDateTimeService;
-import com.ccicnmg.certify.domain.service.DateTimeService;
-import com.ccicnmg.certify.domain.service.UserAuditorAware;
+import com.ccicnmg.certify.service.AuditingDateTimeProvider;
+import com.ccicnmg.certify.service.CurrentTimeDateTimeService;
+import com.ccicnmg.certify.service.DateTimeService;
+import com.ccicnmg.certify.service.UserAuditorAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.auditing.DateTimeProvider;
