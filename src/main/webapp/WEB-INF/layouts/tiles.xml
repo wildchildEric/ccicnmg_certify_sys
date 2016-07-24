@@ -3,6 +3,15 @@
         "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
 
+    <definition name="security" template="/WEB-INF/layouts/security.jsp">
+
+    </definition>
+
+    <definition name="login" extends="security">
+        <put-attribute name="main_content" value="/WEB-INF/views/login.jsp"/>
+    </definition>
+
+
     <definition name="base" template="/WEB-INF/layouts/application.jsp">
         <put-attribute name="sidebar" value="/WEB-INF/layouts/sidebar.jsp"/>
         <put-attribute name="top_nav" value="/WEB-INF/layouts/top_nav.jsp"/>
@@ -11,5 +20,6 @@
     <definition name="home" extends="base">
         <put-attribute name="main_content" value="/WEB-INF/views/home.jsp"/>
     </definition>
+
 
 </tiles-definitions>
