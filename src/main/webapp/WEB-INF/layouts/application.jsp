@@ -19,6 +19,7 @@
     <script src="<c:url value="/assets/public/js/node_modules.js"/>"></script>
     <script src="<c:url value="/assets/public/js/vendor.js"/>"></script>
     <script src="<c:url value="/assets/public/js/app.js"/>"></script>
+    <script>require('javascripts/application')</script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -44,17 +45,3 @@
 </div>
 </body>
 </html>
-<script>
-    $(document).ready(function () {
-        if (!null) {
-            $('nav ul').jarvismenu({
-                accordion: true,
-                speed: 0,
-                closedSign: '<em class="fa fa-plus-square-o"></em>',
-                openedSign: '<em class="fa fa-minus-square-o"></em>'
-            });
-        } else {
-            alert("Error - menu anchor does not exist");
-        }
-    });
-</script>
