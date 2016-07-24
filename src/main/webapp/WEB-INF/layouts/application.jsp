@@ -14,11 +14,11 @@
     <title>CCICNMG认证管理系统</title>
     <!--stylesheets-->
     <link href="<c:url value="/assets/public/css/vendor.css"/>" rel="stylesheet">
-    <link href="<c:url value="/assets/public/css/app.css"/>" rel="stylesheet">
+    <link href="<c:url value="/assets/public/css/application.css"/>" rel="stylesheet">
     <!--javascripts-->
     <script src="<c:url value="/assets/public/js/node_modules.js"/>"></script>
     <script src="<c:url value="/assets/public/js/vendor.js"/>"></script>
-    <script src="<c:url value="/assets/public/js/app.js"/>"></script>
+    <script src="<c:url value="/assets/public/js/application.js"/>"></script>
     <script>require('javascripts/application')</script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -27,9 +27,13 @@
     <![endif]-->
 </head>
 <body>
+
+<img src="<c:url value="/assets/public/images/ajax-loader.gif"/>" id="loading-indicator"/>
+
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <t:insertAttribute name="top_nav"/>
 </div>
+
 <div class="container-fluid" style="margin: 20px 10px 10px 10px;">
     <div class="row row-offcanvas row-offcanvas-left">
         <div class="col-sm-3 col-md-2 sidebar">

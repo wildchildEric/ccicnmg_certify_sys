@@ -4,13 +4,12 @@ module.exports = {
             joinTo: {
                 'js/node_modules.js': /^node_modules/,
                 'js/vendor.js': /^vendor/,
-                'js/app.js': /^app/
+                'js/application.js': /^app/
             }
         },
-
         stylesheets: {
             joinTo: {
-                'css/app.css': /^app/,
+                'css/application.css': /^app/,
                 'css/vendor.css': /^vendor/
             }
         }

@@ -1,0 +1,16 @@
+table .header-fixed {
+    position: fixed;
+    top: 50px;
+    z-index: 1020; /* 10 less than .navbar-fixed to prevent any overlap */
+    /*border-bottom: 1px solid white;*/
+    /*-webkit-border-radius: 0;*/
+    /*-moz-border-radius: 0;*/
+    /*border-radius: 0;*/
+    /*-webkit-box-shadow: inset 0 1px 0 #fff, 0 1px 5px rgba(0, 0, 0, .1);*/
+    /*-moz-box-shadow: inset 0 1px 0 #fff, 0 1px 5px rgba(0, 0, 0, .1);*/
+    /*box-shadow: inset 0 1px 0 #fff, 0 1px 5px rgba(0, 0, 0, .1);*/
+    /*filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); *//* IE6-9 */
+    filter: alpha(opacity=9); /* ie 有效*/
+    -moz-opacity: 0.9; /* Firefox  有效*/
+    opacity: 0.9; /* 通用，其他浏览器  有效*/
+}

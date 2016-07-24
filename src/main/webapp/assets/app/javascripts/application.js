@@ -14,15 +14,12 @@ require('bootstrap/js/button');
 // require('bootstrap/js/affix');
 /*------------------------------------*/
 
+var app = require('javascripts/app');
+
 $(document).ready(function () {
-    if (!null) {
-        $('nav ul').jarvismenu({
-            accordion: true,
-            speed: 0,
-            closedSign: '<em class="fa fa-plus-square-o"></em>',
-            openedSign: '<em class="fa fa-minus-square-o"></em>'
-        });
-    } else {
-        alert("Error - menu anchor does not exist");
-    }
+    app.mobile_toggle();
+    app.init_menu_tree();
+    app.init_toggle_nav();
 });
+$(document).ajaxSend(app.startSpinner);
+$(document).ajaxComplete(app.stopSpinner);
