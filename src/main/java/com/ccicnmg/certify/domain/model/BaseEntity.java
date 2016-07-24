@@ -1,9 +1,6 @@
 package com.ccicnmg.certify.domain.model;
 
-import org.springframework.data.annotation.CreatedBy;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedBy;
-import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.annotation.*;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.EntityListeners;
@@ -16,6 +13,10 @@ import java.time.ZonedDateTime;
 @EntityListeners(AuditingEntityListener.class)
 @MappedSuperclass
 public abstract class BaseEntity {
+
+    @Id
+    private Long id;
+
     @CreatedDate
     private ZonedDateTime creationTime;
 
@@ -27,5 +28,9 @@ public abstract class BaseEntity {
 
     @LastModifiedBy
     private User modifiedByUser;
+
+    public Long getId() {
+        return id;
+    }
 
 }
