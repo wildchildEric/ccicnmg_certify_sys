@@ -1,5 +1,6 @@
 package com.ccicnmg.certify.domain.service;
 
+import com.ccicnmg.certify.domain.model.User;
 import com.ccicnmg.certify.domain.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -18,6 +19,11 @@ public class UserService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String name) throws UsernameNotFoundException {
-        return userRepository.findByUsername(name);
+        User user = userRepository.findByUsername(name);
+        if (user != null) {
+            return user;
+        } else {
+            throw new UsernameNotFoundException("User '" + name + "' not found.");
+        }
     }
 }
