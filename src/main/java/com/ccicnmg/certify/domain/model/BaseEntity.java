@@ -38,4 +38,19 @@ public abstract class BaseEntity {
         return id;
     }
 
+    public ZonedDateTime getCreationTime() {
+        return creationTime;
+    }
+
+    public ZonedDateTime getModificationTime() {
+        return modificationTime;
+    }
+
+    public User getCreatedByUser() {
+        return createdByUser;
+    }
+
+    public User getModifiedByUser() {
+        return modifiedByUser;
+    }
 }

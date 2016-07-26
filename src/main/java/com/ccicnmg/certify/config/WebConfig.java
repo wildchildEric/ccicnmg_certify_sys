@@ -34,17 +34,17 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     }
 
     @Bean
-    AuditorAware<User> auditorProvider() {
+    public AuditorAware<User> auditorProvider() {
         return new UserAuditorAware();
     }
 
     @Bean
-    DateTimeService currentTimeDateTimeService() {
+    public DateTimeService currentTimeDateTimeService() {
         return new CurrentTimeDateTimeService();
     }
 
     @Bean
-    DateTimeProvider dateTimeProvider(DateTimeService dateTimeService) {
+    public DateTimeProvider dateTimeProvider(DateTimeService dateTimeService) {
         return new AuditingDateTimeProvider(dateTimeService);
     }
 }
