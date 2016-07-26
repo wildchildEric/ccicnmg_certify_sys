@@ -1,6 +1,5 @@
 var $ = require('jquery');
 var app = {
-    LEFT_NAV_VISIBLE_KEY: 'side_bar_visible',
     mobile_toggle: function () {//Mobile Phone view Toggle function
         $('[data-toggle="offcanvas"]').click(function () {
             $('.row-offcanvas').toggleClass('active')
@@ -96,12 +95,13 @@ var app = {
         }
     },
     init_toggle_nav: function () {
+        const LEFT_NAV_VISIBLE_KEY = 'side_bar_visible';
         var toggle_nav_div = $('#toggle_nav_div');
         if (window.localStorage) {
             var side_bar = $('.sidebar');
             var main_div = $('#main_content_div');
             var side_bar_visible = function () {
-                var store_value = localStorage.getItem(app.LEFT_NAV_VISIBLE_KEY);
+                var store_value = localStorage.getItem(LEFT_NAV_VISIBLE_KEY);
                 return store_value == 'true' || store_value == null;
             };
             var hide_nav_menu = function () {
@@ -116,10 +116,10 @@ var app = {
             toggle_nav_div.click(function () {
                 if (side_bar_visible()) {
                     hide_nav_menu();
-                    localStorage.setItem(app.LEFT_NAV_VISIBLE_KEY, false);
+                    localStorage.setItem(LEFT_NAV_VISIBLE_KEY, false);
                 } else {
                     show_nav_menu();
-                    localStorage.setItem(app.LEFT_NAV_VISIBLE_KEY, true);
+                    localStorage.setItem(LEFT_NAV_VISIBLE_KEY, true);
                 }
                 app.init_table_fixed_header();
             });
