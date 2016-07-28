@@ -121,7 +121,8 @@
                     <password>${spring.datasource.password}</password>
                     <!--
                         For future reference, this works great,
-                        but you need to invoke mvn initialize explicitly before calling the flay plugin e.g. mvn initialize flyway:migrate
+                        but you need to invoke mvn initialize explicitly before calling the flay plugin;
+                        e.g. mvn initialize flyway:migrate
                     -->
                 </configuration>
             </plugin>
