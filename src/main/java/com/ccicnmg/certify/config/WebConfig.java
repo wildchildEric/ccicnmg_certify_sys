@@ -1,6 +1,6 @@
 package com.ccicnmg.certify.config;
 
-import com.ccicnmg.certify.domain.model.User;
+import com.ccicnmg.certify.security.User;
 import com.ccicnmg.certify.service.AuditingDateTimeProvider;
 import com.ccicnmg.certify.service.CurrentTimeDateTimeService;
 import com.ccicnmg.certify.service.DateTimeService;
