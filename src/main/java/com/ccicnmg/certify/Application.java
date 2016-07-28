@@ -17,7 +17,6 @@ public class Application implements CommandLineRunner {
 
     @Override
     public void run(String... strings) throws Exception {
-        logger.info("Running CommandLineRunner's run.");
-        logger.info("Some initial work can be done here.");
+        logger.info("Some Initialize work can be done here.");
     }
 }
