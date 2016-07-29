@@ -1,6 +1,6 @@
 package com.ccicnmg.certify.domain.model;
 
-import com.ccicnmg.certify.security.User;
+import com.ccicnmg.certify.domain.model.security.User;
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;

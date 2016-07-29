@@ -1,6 +1,6 @@
 package com.ccicnmg.certify.service;
 
-import com.ccicnmg.certify.security.User;
+import com.ccicnmg.certify.domain.model.security.User;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;

@@ -1,4 +1,4 @@
-package com.ccicnmg.certify.security;
+package com.ccicnmg.certify.domain.model.security;
 
 import com.ccicnmg.certify.domain.model.BaseEntity;
 
