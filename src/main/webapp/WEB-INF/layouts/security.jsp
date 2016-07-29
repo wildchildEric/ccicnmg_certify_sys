@@ -33,9 +33,7 @@
     <![endif]-->
 </head>
 <body>
-<div class="container">
-    <%--<%= render 'layouts/flash' %>--%>
-    <t:insertAttribute name="main_content"/>
-</div>
+<%--<%= render 'layouts/flash' %>--%>
+<t:insertAttribute name="main_content"/>
 </body>
 </html>

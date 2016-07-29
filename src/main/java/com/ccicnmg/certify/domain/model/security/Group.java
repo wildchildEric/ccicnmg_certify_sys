@@ -15,7 +15,7 @@ public class Group extends BaseEntity {
 
     private String name;
     private String description;
-    @OneToMany
+    @OneToMany(mappedBy = "group")
     private Collection<Authority> authorities;
     @ManyToMany
     private Collection<User> users;

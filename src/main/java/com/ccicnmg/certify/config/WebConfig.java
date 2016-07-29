@@ -1,10 +1,7 @@
 package com.ccicnmg.certify.config;
 
 import com.ccicnmg.certify.domain.model.security.User;
-import com.ccicnmg.certify.service.AuditingDateTimeProvider;
-import com.ccicnmg.certify.service.CurrentTimeDateTimeService;
-import com.ccicnmg.certify.service.DateTimeService;
-import com.ccicnmg.certify.service.UserAuditorAware;
+import com.ccicnmg.certify.service.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.auditing.DateTimeProvider;
@@ -30,7 +27,9 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 
     @Bean
     public ViewResolver viewResolver() {
-        return new TilesViewResolver();
+        TilesViewResolver viewResolver = new TilesViewResolver();
+        viewResolver.setExposeContextBeansAsAttributes(true);
+        return viewResolver;
     }
 
     @Bean
@@ -46,5 +45,10 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     @Bean
     public DateTimeProvider dateTimeProvider(DateTimeService dateTimeService) {
         return new AuditingDateTimeProvider(dateTimeService);
+    }
+
+    @Bean
+    public Constants constants() {
+        return new Constants();
     }
 }

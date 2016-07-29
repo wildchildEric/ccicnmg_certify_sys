@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <div class="container-fluid">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -16,7 +17,7 @@
         </button>
         <div class="navbar-brand">
             <div id="toggle_nav_div" class="fa fa-bars toggle-left-nav" title="切换菜单栏显示/隐藏"></div>
-            <label class="nav-title-system-name">Constants::SYSTEM_NAME | </label>
+            <label class="nav-title-system-name"><c:out value="${constants.getApplicationName()}"/> | </label>
             <b class="nav-title-page-name"> page_title </b>
         </div>
     </div>

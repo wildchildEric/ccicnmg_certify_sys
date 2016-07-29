@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * Created by lizhe on 16/7/24.
  */
 @Controller
-public class HomeController {
+public class HomeController extends ApplicationController {
 
     @RequestMapping("/")
-    public String index(){
+    public String index() {
         return "home";
     }
 }
