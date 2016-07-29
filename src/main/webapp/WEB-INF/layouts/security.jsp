@@ -15,7 +15,7 @@
     <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
     <meta name="viewport"
           content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"/>
-    <title>Title</title>
+    <title><t:getAsString name="page_title"/></title>
     <link href="<c:url value="/assets/public/css/vendor.css"/>" rel="stylesheet">
     <style type="text/css">
         body {

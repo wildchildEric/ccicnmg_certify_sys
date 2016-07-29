@@ -5,17 +5,20 @@
   Time: 下午5:11
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java"
+         import="com.ccicnmg.certify.CertifyApplication" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="t" %>
+<%@ taglib prefix="t" uri="http://tiles.apache.org/tags-tiles" %>
+<%@ taglib prefix="s" uri="http://www.springframework.org/tags" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
     <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-    <title>CCICNMG认证管理系统</title>
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"/>
+    <title><t:getAsString name="sub_page_title"/> | ${CertifyApplication.APPLICATION_NAME}</title>
     <!--stylesheets-->
     <link href="<c:url value="/assets/public/css/vendor.css"/>" rel="stylesheet">
     <link href="<c:url value="/assets/public/css/application.css"/>" rel="stylesheet">
@@ -33,7 +36,6 @@
 <body>
 
 <img src="<c:url value="/assets/public/images/ajax-loader.gif"/>" id="loading-indicator"/>
-
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <t:insertAttribute name="top_nav"/>
 </div>

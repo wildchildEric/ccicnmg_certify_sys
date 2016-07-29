@@ -11,6 +11,8 @@ public class CertifyApplication implements CommandLineRunner {
 
     private static final Logger logger = LoggerFactory.getLogger(CertifyApplication.class);
 
+    public static final String APPLICATION_NAME = "CCICNM认证管理系统";
+
     public static void main(String[] args) {
         SpringApplication.run(CertifyApplication.class, args);
     }

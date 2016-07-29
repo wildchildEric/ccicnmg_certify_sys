@@ -8,7 +8,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 public class SecurityController extends ApplicationController {
-    @RequestMapping("/login")
+
+    public static final String LOGIN_PATH = "/login";
+
+    @RequestMapping(LOGIN_PATH)
     public String login() {
         return "login";
     }

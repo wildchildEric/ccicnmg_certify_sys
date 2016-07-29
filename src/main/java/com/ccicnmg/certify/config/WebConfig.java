@@ -28,7 +28,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     @Bean
     public ViewResolver viewResolver() {
         TilesViewResolver viewResolver = new TilesViewResolver();
-        viewResolver.setExposeContextBeansAsAttributes(true);
+//        viewResolver.setExposeContextBeansAsAttributes(true);
         return viewResolver;
     }
 
@@ -45,10 +45,5 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     @Bean
     public DateTimeProvider dateTimeProvider(DateTimeService dateTimeService) {
         return new AuditingDateTimeProvider(dateTimeService);
-    }
-
-    @Bean
-    public Constants constants() {
-        return new Constants();
     }
 }

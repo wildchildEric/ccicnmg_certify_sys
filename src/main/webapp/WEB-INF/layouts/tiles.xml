@@ -1,24 +1,27 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
         "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
 
     <definition name="security" template="/WEB-INF/layouts/security.jsp">
-
+        <put-attribute name="page_title" value=""/>
     </definition>
 
     <definition name="login" extends="security">
         <put-attribute name="main_content" value="/WEB-INF/views/login.jsp"/>
+        <put-attribute name="page_title" value="登陆"/>
     </definition>
 
 
     <definition name="base" template="/WEB-INF/layouts/application.jsp">
         <put-attribute name="sidebar" value="/WEB-INF/layouts/sidebar.jsp"/>
         <put-attribute name="top_nav" value="/WEB-INF/layouts/top_nav.jsp"/>
+        <put-attribute name="sub_page_title" value="" cascade="true"/>
     </definition>
 
     <definition name="home" extends="base">
         <put-attribute name="main_content" value="/WEB-INF/views/home.jsp"/>
+        <put-attribute name="sub_page_title" value="首页" cascade="true"/>
     </definition>
 
 

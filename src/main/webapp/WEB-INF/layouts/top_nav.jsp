@@ -5,8 +5,9 @@
   Time: 下午5:23
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" import="com.ccicnmg.certify.CertifyApplication"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="t" uri="http://tiles.apache.org/tags-tiles" %>
 <div class="container-fluid">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -17,8 +18,8 @@
         </button>
         <div class="navbar-brand">
             <div id="toggle_nav_div" class="fa fa-bars toggle-left-nav" title="切换菜单栏显示/隐藏"></div>
-            <label class="nav-title-system-name"><c:out value="${constants.getApplicationName()}"/> | </label>
-            <b class="nav-title-page-name"> page_title </b>
+            <label class="nav-title-system-name">${CertifyApplication.APPLICATION_NAME} | </label>
+            <b class="nav-title-page-name"> <t:getAsString name="sub_page_title"/></b>
         </div>
     </div>
     <div class="navbar-collapse collapse">

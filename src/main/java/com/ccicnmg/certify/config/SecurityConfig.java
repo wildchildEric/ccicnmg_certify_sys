@@ -1,5 +1,6 @@
 package com.ccicnmg.certify.config;
 
+import com.ccicnmg.certify.controller.SecurityController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -27,20 +28,25 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
+
                 .authorizeRequests()
-                .antMatchers("/assets/**", "/signup", "/about").permitAll()
+                .antMatchers("/assets/public/**").permitAll()
 //                .anyRequest().authenticated()
 
                 .and()
-                .formLogin()
-                .loginPage("/login")
+                .formLogin().loginPage(SecurityController.LOGIN_PATH)
+//                .successHandler((httpServletRequest, httpServletResponse, authentication) -> {
+//
+//                })
+//                .failureHandler((httpServletRequest, httpServletResponse, e) -> {
+//
+//                })
                 .permitAll();
     }
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(userService)
-                .passwordEncoder(passwordEncoder);
+        auth.userDetailsService(userService).passwordEncoder(passwordEncoder);
     }
 
     @Bean

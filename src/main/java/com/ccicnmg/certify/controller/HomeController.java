@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class HomeController extends ApplicationController {
 
-    @RequestMapping("/")
+    public static final String ROOT_PATH = "/";
+
+    @RequestMapping(ROOT_PATH)
     public String index() {
         return "home";
     }
