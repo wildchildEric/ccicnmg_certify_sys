@@ -8,7 +8,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-@ActiveProfiles("test")//set the active profile to test
+@ActiveProfiles("test")
 public class CertifyApplicationTests {
 
     @Test
