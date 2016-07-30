@@ -7,6 +7,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
+import javax.persistence.Table;
 import java.util.Collection;
 import java.util.stream.Collectors;
 //    org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl;
@@ -15,6 +16,7 @@ import java.util.stream.Collectors;
  * Created by lizhe on 16/7/24.
  */
 @Entity
+@Table(name = "user_")
 public class User extends BaseEntity implements UserDetails {
 
     private String name;
