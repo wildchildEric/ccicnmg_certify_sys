@@ -6,7 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
+<%@ taglib prefix="common" tagdir="/WEB-INF/tags/common" %>
+<%@ taglib prefix="s" uri="http://www.springframework.org/tags" %>
 <nav>
     <!-- NOTE: Notice the gaps after each icon usage <i></i>..
     Please note that these links work a bit different than
@@ -112,7 +113,7 @@
         <li>
             <a href="#"><i class="fa fa-lg fa-fw fa-dashboard"></i> <span class="menu-item-parent">系统管理</span></a>
             <ul>
-                <li><a href="/users"><i class="fa fa-2x fa-fw fa-user"></i> 用户管理</a></li>
+                <common:second_level_navigation path="${s:mvcUrl('UC#index').build()}" icon="fa-user" title="用户管理"/>
                 <li><a href="/roles"><i class="fa fa-2x fa-fw fa-unlock-alt"></i> 权限管理</a></li>
             </ul>
         </li>

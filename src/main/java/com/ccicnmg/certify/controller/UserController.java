@@ -1,5 +1,6 @@
 package com.ccicnmg.certify.controller;
 
+import org.slf4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,6 +19,8 @@ public class UserController extends ApplicationController {
     public static final String USER_SHOW_PATH = "/users/{id}";
     public static final String USER_EDIT_PATH = "/users/{id}/edit";
     public static final String USER_UPDATE_PATH = USER_SHOW_PATH;
+
+    private Logger logger = org.slf4j.LoggerFactory.getLogger(UserController.class);
 
     @RequestMapping(value = USER_INDEX_PATH, method = RequestMethod.GET)
     public String index() {
