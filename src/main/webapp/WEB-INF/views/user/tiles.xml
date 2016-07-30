@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <definition name="user/index" extends="base">
+        <put-attribute name="main_content" value="/WEB-INF/views/user/index.jsp"/>
+        <put-attribute name="sub_page_title" value="用户列表" cascade="true"/>
+    </definition>
+
+    <definition name="user/new" extends="base">
+        <put-attribute name="main_content" value="/WEB-INF/views/user/new.jsp"/>
+        <put-attribute name="sub_page_title" value="用户新增" cascade="true"/>
+    </definition>
+
+    <definition name="user/show" extends="base">
+        <put-attribute name="main_content" value="/WEB-INF/views/user/show.jsp"/>
+        <put-attribute name="sub_page_title" value="用户详情" cascade="true"/>
+    </definition>
+
+    <definition name="user/edit" extends="base">
+        <put-attribute name="main_content" value="/WEB-INF/views/user/edit.jsp"/>
+        <put-attribute name="sub_page_title" value="用户编辑" cascade="true"/>
+    </definition>
+</tiles-definitions>

@@ -13,6 +13,6 @@ public class SecurityController extends ApplicationController {
 
     @RequestMapping(LOGIN_PATH)
     public String login() {
-        return "login";
+        return "security/login";
     }
 }

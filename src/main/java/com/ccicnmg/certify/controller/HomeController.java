@@ -13,6 +13,6 @@ public class HomeController extends ApplicationController {
 
     @RequestMapping(ROOT_PATH)
     public String index() {
-        return "home";
+        return "home/index";
     }
 }

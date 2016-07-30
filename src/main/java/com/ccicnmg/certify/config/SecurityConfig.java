@@ -29,17 +29,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
                 .authorizeRequests()
                 .antMatchers("/assets/public/**").permitAll()
-//                .anyRequest().authenticated()
+                .anyRequest().authenticated()
 
                 .and()
-                .formLogin().loginPage(SecurityController.LOGIN_PATH)
-//                .successHandler((httpServletRequest, httpServletResponse, authentication) -> {
-//
-//                })
-//                .failureHandler((httpServletRequest, httpServletResponse, e) -> {
-//
-//                })
-                .permitAll();
+                .formLogin().loginPage(SecurityController.LOGIN_PATH).permitAll();
     }
 
     @Override

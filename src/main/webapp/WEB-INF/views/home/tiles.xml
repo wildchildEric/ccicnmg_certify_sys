@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <!--Home-->
+    <definition name="home/index" extends="base">
+        <put-attribute name="main_content" value="/WEB-INF/views/home/index.jsp"/>
+        <put-attribute name="sub_page_title" value="首页" cascade="true"/>
+    </definition>
+</tiles-definitions>
