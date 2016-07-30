@@ -4,20 +4,20 @@ import com.ccicnmg.certify.domain.model.BaseEntity;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 /**
  * Created by lizhe on 16/7/29.
  */
 @Entity
+@Table(name = "t_authority")
 public class Authority extends BaseEntity {
 
     public static final String ROLE_ADMIN = "ROLE_ADMIN";
 
-
     private String role;
     @ManyToOne
     private Group group;
-
 
     public String getRole() {
         return role;

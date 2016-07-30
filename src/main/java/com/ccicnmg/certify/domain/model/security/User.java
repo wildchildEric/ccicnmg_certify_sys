@@ -5,9 +5,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Collection;
 import java.util.stream.Collectors;
 //    org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl;
@@ -16,7 +14,7 @@ import java.util.stream.Collectors;
  * Created by lizhe on 16/7/24.
  */
 @Entity
-@Table(name = "user_")
+@Table(name = "t_user")
 public class User extends BaseEntity implements UserDetails {
 
     private String name;
@@ -27,7 +25,10 @@ public class User extends BaseEntity implements UserDetails {
     private boolean credentialsNonExpired;
     private boolean enabled;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "t_user_group",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "group_id"))
     private Collection<Group> groups;
 
     @Override
