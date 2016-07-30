@@ -1,7 +1,7 @@
 package com.ccicnmg.certify.domain.service;
 
-import com.ccicnmg.certify.domain.repository.UserRepository;
 import com.ccicnmg.certify.domain.model.security.User;
+import com.ccicnmg.certify.domain.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

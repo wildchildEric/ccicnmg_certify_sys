@@ -1,4 +1,4 @@
-package com.ccicnmg.certify.cmdline_runner;
+package com.ccicnmg.certify.runner;
 
 import com.ccicnmg.certify.domain.model.security.Authority;
 import com.ccicnmg.certify.domain.model.security.Group;
